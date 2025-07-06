@@ -1,12 +1,12 @@
 ---
 banner:
-  title: "Scale design & dev operations with Avocode Enterprise"
-  content: "A fully integrated suite of authentication & authoriz products, Stytch’s platform removes the headache of."
-  image: /images/banner-img.png
+  title: "Perth Heat Pump and Solar Energy Specialists"
+  content: ""
+  image: /images/gl/AQUATEC-IMG-460x1024.png
   button:
     enable: true
-    label: Download The Theme
-    link: "https://themefisher.com/astro-themes/pinwheel-astro"
+    label: Get an obligation free quote
+    link: /contact
 
 ##key features
 key_features:
