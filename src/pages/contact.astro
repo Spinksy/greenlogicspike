@@ -8,7 +8,7 @@ import { getEntry } from "astro:content";
 
 const entry = (await getEntry(
   "contact",
-  "-index"
+  "-index",
 )) as CollectionEntry<"contact">;
 const { contact_form_action } = config.params;
 const contact = entry.data;
@@ -57,42 +57,63 @@ const page_data = {
             method="POST"
           >
             <div class="form-group mb-5">
-              <label class="form-label" for="name">Full Name</label>
               <input
                 class="form-control"
                 type="text"
+                name="name"
                 id="name"
                 placeholder="Your Full Name"
               />
             </div>
             <div class="form-group mb-5">
-              <label class="form-label" for="eamil">Email Adrdess</label>
               <input
                 class="form-control"
                 type="text"
                 id="email"
+                name="email"
                 placeholder="Your  Email Address"
               />
             </div>
             <div class="form-group mb-5">
-              <label class="form-label" for="reason">Reason/Purpose</label>
-              <select name="reason" id="reason" class="form-select" required>
-                <option value="">Select reason/purpose</option>
-                <option value="investment plane">Investment Plan</option>
-                <option value="investment plane-2">Investment Plan 2</option>
-                <option value="investment plane-3">Investment Plan 3</option>
-              </select>
+              <input
+                class="form-control"
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="Contact Number"
+              />
             </div>
             <div class="form-group mb-5">
-              <label class="form-label" for="message">Message Here</label>
-              <textarea class="form-control" id="message" cols="30" rows="6"
-              ></textarea>
+            <input
+              class="form-control"
+              type="text"
+              required
+              name="postcode"
+              id="postcode"
+              placeholder="Post Code"
+            />
             </div>
+          
+          <div class="form-group mb-5">
+            <select name="enquiryType" id="enquiryType" class="form-select" required>
+              <option value="">Enquiry Type</option>
+              <option value="Hot Water">Hot Water</option>
+              <option value="Solar Power">Solar Power</option>
+              <option value="Battery Storage">Battery Storage</option>
+            </select>
+          </div>
+          <div class="form-group mb-5">
+            <textarea class="form-control" id="message" cols="30" rows="6" placeholder="Your Message"
+              name="message" required
+            ></textarea>
+          </div>
+          <div class="form-group mb-5">
             <input
               class="btn btn-primary block w-full"
               type="submit"
               value="Send Message"
             />
+          </div>
           </form>
         </div>
       </div>
