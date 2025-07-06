@@ -1,16 +1,12 @@
 ---
 title: "About"
-page_title: "About our company"
+page_title: "Green Logic"
 meta_title: ""
 description: ""
 image: ""
 buttons:
   - label: Download The Theme
     link: "https://themefisher.com/astro-themes/pinwheel-astro"
-    enable: true
-  - label: Learn More
-    link: "#"
-    outline: true
     enable: true
 
 # counter
@@ -64,26 +60,12 @@ features:
 ## members
 members:
   title: This is who we are
-  description: Donec sollicitudin molestie malesda. Donec sollitudin mol estie ultricies ligula sed magna dictum
+  description: ""
   member_list:
-    - name: Eleanor Pena
-      field: Co-founder & COO
-      image: "/images/users/user-1.png"
-    - name: Bukiakta Bansalo
-      field: Product Manager
-      image: "/images/users/user-2.png"
-    - name: Ortrin Okaster
-      field: Software Engineer
-      image: "/images/users/user-3.png"
-    - name: Eleanor Pena
-      field: Co-founder & COO
-      image: "/images/users/user-1.png"
-    - name: Bukiakta Bansalo
-      field: Product Manager
-      image: "/images/users/user-2.png"
-    - name: Ortrin Okaster
-      field: Software Engineer
-      image: "/images/users/user-3.png"
+    - name: Greg Spinks
+      field: Founder & CEO
+      image: "/images/gl/randy.jpeg"
+    - name: Marty Myers
+      field: Business Development Manager
+      image: "/images/gl/marty.jpg"
 ---
-
-Donec sollicitudin molestie malesda. Donec sollitudin molestie malesuada. Mauris pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta. Lorem
