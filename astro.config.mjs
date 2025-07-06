@@ -13,7 +13,15 @@ export default defineConfig({
   site: config.site.base_url ? config.site.base_url : "http://examplesite.com",
   base: config.site.base_path ? config.site.base_path : "/",
   trailingSlash: config.site.trailing_slash ? "always" : "never",
-  vite: { plugins: [tailwindcss()] },
+  vite: { 
+    plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: ['react-lite-youtube-embed']
+    },
+    ssr: {
+      noExternal: ['react-lite-youtube-embed']
+    }
+  },
   integrations: [
     react(),
     sitemap(),
