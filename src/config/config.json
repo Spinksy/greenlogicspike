@@ -1,14 +1,14 @@
 {
   "site": {
-    "title": "Pinwheel Astro",
+    "title": "Green Logic Solar Energy",
     "base_url": "https://pinwheel-astro.vercel.app",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "/images/favicon.png",
-    "logo": "/images/logo.png",
-    "logo_width": "147",
-    "logo_height": "31",
-    "logo_text": "Pinwheel"
+    "favicon": "https://www.hotwater.greenlogic.net.au/wp-content/uploads/2024/12/header-logo-150x150.png",
+    "logo": "https://www.hotwater.greenlogic.net.au/wp-content/uploads/2024/12/header-logo-300x138.png",
+    "logo_width": "200",
+    "logo_height": "90",
+    "logo_text": "Greenlogic Solar Energy Systems"
   },
 
   "settings": {
@@ -35,8 +35,8 @@
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "Spinks Digital",
     "meta_image": "/images/og-image.png",
-    "meta_description": "pinwheel astro"
+    "meta_description": "Green Logic Solar Energy Systems is a leading provider of solar energy solutions, dedicated to delivering sustainable and efficient energy systems for homes and businesses."
   }
 }
