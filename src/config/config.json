@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Green Logic Solar Energy",
-    "base_url": "https://pinwheel-astro.vercel.app",
+    "base_url": "https://spikegreenlogic.netlify.app",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "https://www.hotwater.greenlogic.net.au/wp-content/uploads/2024/12/header-logo-150x150.png",
@@ -26,12 +26,12 @@
   },
 
   "params": {
-    "footer_description": "Lorem ipsum dolor sit sed dmi amet, consectetur adipiscing. Cdo tellus, sed condimentum volutpat.",
-    "email": "info@andromeda.io",
-    "location": "2118 Thornridge Cir. Syracuse, Connecticut 35624",
-    "phone": "+704-555-0127",
+    "footer_description": "Green Logic Australia Pty Ltd ACN 19 150 877 384 PL750 I PL8663 I PL8685 EW209073 I EW151605 I EW133275 I EW169253 I EW158248",
+    "email": "sales@greenlogic.net.au",
+    "location": "U1 7 Glory Road, Gnangara WA 6077",
+    "phone": "(08) 6200 8409",
     "contact_form_action": "https://formspree.io/f/mnnvybvn",
-    "copyright": "Copyright © 2025 a theme by [Themefisher](https://themefisher.com)"
+    "copyright": "Copyright © 2025 Design by [Themefisher](https://themefisher.com) Delivered by Spinks Digital"
   },
 
   "metadata": {
