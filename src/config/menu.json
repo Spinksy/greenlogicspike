@@ -1,20 +1,10 @@
 {
   "main": [
+    
     {
-      "name": "Home",
-      "url": "/"
-    },
-    {
-      "name": "About Us",
-      "url": "/about"
-    },{
-      "name": "Services",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
+     
           "name": "Hot Water",
-          "url": "/careers"
+          "url": "/service"
         },
 
         {
@@ -25,12 +15,12 @@
         {
           "name": "Battery Storage",
           "url": "/pricing"
-        }
-      ]
-    },
+        },
+
+    
     {
-      "name": "Contact",
-      "url": "/contact"
+      "name": "About Us",
+      "url": "/about"
     }
   ],
 
@@ -45,7 +35,7 @@
     },
     {
       "name": "Service and Support",
-      "url": "/serviceandsupport"
+      "url": "/elements"
     },
     {
       "name": "Trade Licences",
