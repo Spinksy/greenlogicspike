@@ -2,7 +2,9 @@
 banner:
   title: "Perth Heat Pump and Solar Energy Specialists"
   content: ""
-  image: /images/gl/AQUATEC-IMG-460x1024.png
+  image: /images/banner/aquatec-460x1024.png
+  warrantyouter: /images/banner/warranty_outer.png
+  warrantyinner: /images/banner/five-icon-52x72.png
   button:
     enable: true
     label: Get an obligation free quote
@@ -10,39 +12,24 @@ banner:
 
 ##key features
 key_features:
-  title: "The Highlighting Part Of Our Solution"
+  title: "Thousands of Solar Systems installed across Perth and Counting..."
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas Werat viverra id et aliquet. vulputate egestas sollicitudin.
   feature_list:
-    - icon: "map" #icon package react-feather-icon
-      title: Live Caption
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "lock" #icon package react-feather-icon
-      title: Smart Reply
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "link" #icon package react-feather-icon
-      title: Sound Amplifier
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "bell" #icon package react-feather-icon
-      title: Sound Amplifier
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "monitor" #icon package react-feather-icon
-      title: Smart Reply
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "map" #icon package react-feather-icon
-      title: Live Caption
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "link" #icon package react-feather-icon
-      title: Sound Amplifier
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "bell" #icon package react-feather-icon
-      title: Sound Amplifier
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "map" #icon package react-feather-icon
-      title: Smart Reply
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    - icon: "monitor" #icon package react-feather-icon
-      title: Live Caption
-      content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    - icon: "thermometer" #icon package react-feather-icon
+      title: Heat Pumps
+      content: Savings will appear out of thin air with an Aquatech Heat Pump hot water system
+    - icon: "sun" #icon package react-feather-icon
+      title: Solar Power
+      content: We can help you slash your power bills with a solar power package
+    - icon: "batteryCharging" #icon package react-feather-icon
+      title: Battery Storage
+      content: Maximise your solar savings with battery storage
+    - icon: "sunrise" #icon package react-feather-icon
+      title: Solar Hot Water
+      content: Soak in the Sunshine with one of our roof or ground mounted solar hot water systems
+    - icon: "droplet" #icon package react-feather-icon
+      title: Pool Heat Pumps
+      content: Extend your swimming season with a pool heat pump water heater
 
 #service
 service:

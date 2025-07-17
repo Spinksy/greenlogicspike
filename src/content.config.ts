@@ -9,6 +9,8 @@ const homepageCollection = defineCollection({
       title: z.string(),
       content: z.string().optional(),
       image: z.string(),
+      warrantyouter: z.string().optional(),
+      warrantyinner: z.string().optional(),
       button: z
         .object({
           label: z.string(),
