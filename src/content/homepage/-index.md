@@ -1,6 +1,6 @@
 ---
 banner:
-  title: "Perth Heat Pump and Solar Energy Specialists"
+  title: "Perth Solar Energy, Battery Storage and Heat Pump Specialists"
   content: ""
   image: /images/banner/aquatec-460x1024.png
   warrantyouter: /images/banner/warranty_outer.png
