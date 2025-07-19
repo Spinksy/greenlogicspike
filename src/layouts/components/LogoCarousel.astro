@@ -41,7 +41,7 @@
 
 <style>
   .logo-carousel-section {
-    background-color: #2d5824; /* Using primary color from theme.json */
+    background-color: #ffffff; /* White background */
     overflow: hidden;
   }
 
@@ -49,19 +49,19 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    /* Create fade effect using CSS mask */
+    /* Create fade effect using CSS mask - adjusted for white background */
     mask: linear-gradient(
       90deg,
       transparent 0%,
-      black 10%,
-      black 90%,
+      black 15%,
+      black 85%,
       transparent 100%
     );
     -webkit-mask: linear-gradient(
       90deg,
       transparent 0%,
-      black 10%,
-      black 90%,
+      black 15%,
+      black 85%,
       transparent 100%
     );
   }
@@ -91,14 +91,16 @@
     width: auto;
     height: auto;
     object-fit: contain;
-    filter: brightness(0) invert(1); /* Ensure logos are white */
+    /* Convert white logos to primary green (#2d5824) using precise CSS filters */
+    filter: invert(1) sepia(1) saturate(2) hue-rotate(95deg) brightness(0.4) contrast(1.2);
     opacity: 0.9;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
   }
 
   .logo-item:hover img {
     opacity: 1;
     transform: scale(1.05);
+    filter: invert(1) sepia(1) saturate(3) hue-rotate(95deg) brightness(0.5) contrast(1.3);
   }
 
   @keyframes scroll-infinite {
