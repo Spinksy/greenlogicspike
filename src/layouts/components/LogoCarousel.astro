@@ -1,0 +1,160 @@
+---
+// LogoCarousel component for displaying partner logos
+// Uses infinite scrolling animation with fade edge effects
+---
+
+<section class="logo-carousel-section py-3" aria-label="Partner logos">
+  <div class="container">
+    <div class="logo-carousel-wrapper" role="marquee" aria-live="off">
+      <div class="logo-carousel-track">
+        <!-- First set of logos -->
+        <div class="logo-item">
+          <img src="/images/carousel/aquatech.webp" alt="Aquatech - Partner" loading="lazy" />
+        </div>
+        <div class="logo-item">
+          <img src="/images/carousel/Goodwe-Logo-white.png" alt="Goodwe - Partner" loading="lazy" />
+        </div>
+        <div class="logo-item">
+          <img src="/images/carousel/Sungrow-Logo-white.png" alt="Sungrow - Partner" loading="lazy" />
+        </div>
+        <div class="logo-item">
+          <img src="/images/carousel/Growatt-Logo-white.png" alt="Growatt - Partner" loading="lazy" />
+        </div>
+        
+        <!-- Duplicate set for seamless loop -->
+        <div class="logo-item" aria-hidden="true">
+          <img src="/images/carousel/aquatech.webp" alt="" loading="lazy" />
+        </div>
+        <div class="logo-item" aria-hidden="true">
+          <img src="/images/carousel/Goodwe-Logo-white.png" alt="" loading="lazy" />
+        </div>
+        <div class="logo-item" aria-hidden="true">
+          <img src="/images/carousel/Sungrow-Logo-white.png" alt="" loading="lazy" />
+        </div>
+        <div class="logo-item" aria-hidden="true">
+          <img src="/images/carousel/Growatt-Logo-white.png" alt="" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .logo-carousel-section {
+    background-color: #2d5824; /* Using primary color from theme.json */
+    overflow: hidden;
+  }
+
+  .logo-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* Create fade effect using CSS mask */
+    mask: linear-gradient(
+      90deg,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
+    -webkit-mask: linear-gradient(
+      90deg,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
+  }
+
+  .logo-carousel-track {
+    display: flex;
+    align-items: center;
+    width: calc(200% + 4rem); /* Accommodate duplicated logos */
+    gap: 4rem;
+    animation: scroll-infinite 20s linear infinite;
+    will-change: transform;
+  }
+
+  .logo-item {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    min-width: 120px;
+    padding: 1rem;
+  }
+
+  .logo-item img {
+    max-height: 60px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Ensure logos are white */
+    opacity: 0.9;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .logo-item:hover img {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  @keyframes scroll-infinite {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .logo-carousel-track {
+      gap: 2rem;
+      animation-duration: 15s;
+    }
+    
+    .logo-item {
+      min-width: 100px;
+      height: 60px;
+      padding: 0.5rem;
+    }
+    
+    .logo-item img {
+      max-height: 40px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo-carousel-track {
+      gap: 1.5rem;
+      animation-duration: 12s;
+    }
+    
+    .logo-item {
+      min-width: 80px;
+      height: 50px;
+    }
+    
+    .logo-item img {
+      max-height: 30px;
+    }
+  }
+
+  /* Pause animation on hover for better UX */
+  @media (hover: hover) {
+    .logo-carousel-wrapper:hover .logo-carousel-track {
+      animation-play-state: paused;
+    }
+  }
+
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .logo-carousel-track {
+      animation: none;
+    }
+  }
+</style>
