@@ -12,19 +12,12 @@ const HomePageFeatures = ({ feature_list }) => {
             className="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
           >
             <div>
-              <div className="flex space-between">
-                <h3 className="h4 text-xl lg:text-2xl flex-1">{item.title}</h3>
-                <span className="icon">
-                  <FeatherIcon />
-                </span>
-              </div>
-              <div className="h-6">
-
-              </div>
+              <h3 className="h4 text-xl lg:text-2xl">{item.title}</h3>
               <p>{item.content}</p>
-              <div className="image-placeholder mt-4 h-32 bg-gray-200"></div>
             </div>
-
+            <span className="icon mt-4">
+              <FeatherIcon />
+            </span>
           </div>
         );
       })}
