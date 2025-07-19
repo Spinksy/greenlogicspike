@@ -3,17 +3,16 @@
     
     {
      
-          "name": "Hot Water",
-          "url": "/service"
-        },
-
-        {
           "name": "Solar Power",
+          "url": "/features"
+        },
+        {
+          "name": "Battery Storage",
           "url": "/integrations"
         },
 
         {
-          "name": "Battery Storage",
+          "name": "Heat Pumps",
           "url": "/pricing"
         },
 
