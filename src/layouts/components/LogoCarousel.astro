@@ -21,7 +21,21 @@
           <img src="/images/carousel/Growatt-Logo-white.png" alt="Growatt - Partner" loading="lazy" />
         </div>
         
-        <!-- Duplicate set for seamless loop -->
+        <!-- Second set for seamless loop -->
+        <div class="logo-item" aria-hidden="true">
+          <img src="/images/carousel/aquatech.webp" alt="" loading="lazy" />
+        </div>
+        <div class="logo-item" aria-hidden="true">
+          <img src="/images/carousel/Goodwe-Logo-white.png" alt="" loading="lazy" />
+        </div>
+        <div class="logo-item" aria-hidden="true">
+          <img src="/images/carousel/Sungrow-Logo-white.png" alt="" loading="lazy" />
+        </div>
+        <div class="logo-item" aria-hidden="true">
+          <img src="/images/carousel/Growatt-Logo-white.png" alt="" loading="lazy" />
+        </div>
+        
+        <!-- Third set for extra smoothness -->
         <div class="logo-item" aria-hidden="true">
           <img src="/images/carousel/aquatech.webp" alt="" loading="lazy" />
         </div>
@@ -69,10 +83,20 @@
   .logo-carousel-track {
     display: flex;
     align-items: center;
-    width: calc(200% + 4rem); /* Accommodate duplicated logos */
+    width: calc(300% + 8rem); /* Accommodate triple set of logos */
     gap: 4rem;
-    animation: scroll-infinite 20s linear infinite;
+    /* 
+     * Seamless loop technique: 
+     * - We have 3 identical sets of 4 logos each (12 total)
+     * - Animation moves exactly 1/3 of the width (one complete set)
+     * - When animation restarts, it's perfectly aligned with the beginning
+     * - This eliminates the flicker/jump effect
+     */
+    animation: scroll-infinite 30s linear infinite;
     will-change: transform;
+    transform-style: preserve-3d;
+    /* Enable hardware acceleration for smoother animation */
+    backface-visibility: hidden;
   }
 
   .logo-item {
@@ -108,7 +132,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(calc(-100% / 3)); /* Move by exactly one set of logos */
     }
   }
 
@@ -116,7 +140,7 @@
   @media (max-width: 768px) {
     .logo-carousel-track {
       gap: 2rem;
-      animation-duration: 15s;
+      animation-duration: 22s;
     }
     
     .logo-item {
@@ -133,7 +157,7 @@
   @media (max-width: 480px) {
     .logo-carousel-track {
       gap: 1.5rem;
-      animation-duration: 12s;
+      animation-duration: 18s;
     }
     
     .logo-item {
