@@ -11,6 +11,7 @@ const homepageCollection = defineCollection({
       image: z.string(),
       warrantyouter: z.string().optional(),
       warrantyinner: z.string().optional(),
+      battery: z.string().optional(),
       button: z
         .object({
           label: z.string(),
