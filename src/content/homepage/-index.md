@@ -24,12 +24,6 @@ key_features:
     - icon: "batteryCharging" #icon package react-feather-icon
       title: Battery Storage
       content: Maximise your solar savings with battery storage
-    - icon: "sunrise" #icon package react-feather-icon
-      title: Solar Hot Water
-      content: Soak in the Sunshine with one of our roof or ground mounted solar hot water systems
-    - icon: "droplet" #icon package react-feather-icon
-      title: Pool Heat Pumps
-      content: Extend your swimming season with a pool heat pump water heater
 
 #service
 service:
