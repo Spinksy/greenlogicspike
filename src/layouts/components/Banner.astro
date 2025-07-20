@@ -2,7 +2,7 @@
 import { markdownify } from "@/lib/utils/textConverter";
 import { Image } from "astro:assets";
 const { banner } = Astro.props;
-const { title, button, image, warrantyouter, warrantyinner, battery, content } = banner;
+const { title, button, image, warrantyouter, warrantyinner, battery, charger, content } = banner;
 ---
 
 <section class="section banner relative">
@@ -45,23 +45,30 @@ const { title, button, image, warrantyouter, warrantyinner, battery, content } =
           width={180}
           height={396}
         />
-        <Image
-          class="absolute bottom-10 -right-10 animate-rotate-slow"
+        <!-- <Image
+          class="absolute -bottom-16 -right-10"
           src={warrantyouter}
           alt="warranty badge"
           width={130}
           height={130}
         />
         <Image
-          class="absolute bottom-22 right-3"
+          class="absolute -bottom-4 right-3"
           src={warrantyinner}
           alt="warranty badge"
           width={26}
           height={36}
-        />
+        /> -->
         <Image
           class="absolute bottom-0 right-37"
           src={battery}
+          alt="goodwe battery storage"
+          width={330}
+          height={330}
+        />
+        <Image
+          class="absolute bottom-1 left-34"
+          src={charger}
           alt="goodwe battery storage"
           width={330}
           height={330}
