@@ -1,53 +1,55 @@
 ---
 // LogoCarousel component for displaying partner logos
 // Uses infinite scrolling animation with fade edge effects
+
+// Define partner logos data
+const partnerLogos = [
+  {
+    src: "/images/carousel/aquatech.webp",
+    alt: "Aquatech - Partner",
+    name: "Aquatech"
+  },
+  {
+    src: "/images/carousel/Goodwe-Logo-white.png",
+    alt: "Goodwe - Partner", 
+    name: "Goodwe"
+  },
+  {
+    src: "/images/carousel/Sungrow-Logo-white.png",
+    alt: "Sungrow - Partner",
+    name: "Sungrow"
+  },
+  {
+    src: "/images/carousel/Growatt-Logo-white.png",
+    alt: "Growatt - Partner",
+    name: "Growatt"
+  },
+  {
+    src: "/images/carousel/sigenergy.png",
+    alt: "Sigenergy - Partner",
+    name: "Sigenergy"
+  }
+];
 ---
 
 <section class="logo-carousel-section py-3" aria-label="Partner logos">
   <div class="container">
-    <div class="logo-carousel-wrapper" role="marquee" aria-live="off">
-      <div class="logo-carousel-track">
-        <!-- First set of logos -->
-        <div class="logo-item">
-          <img src="/images/carousel/aquatech.webp" alt="Aquatech - Partner" loading="lazy" />
-        </div>
-        <div class="logo-item">
-          <img src="/images/carousel/Goodwe-Logo-white.png" alt="Goodwe - Partner" loading="lazy" />
-        </div>
-        <div class="logo-item">
-          <img src="/images/carousel/Sungrow-Logo-white.png" alt="Sungrow - Partner" loading="lazy" />
-        </div>
-        <div class="logo-item">
-          <img src="/images/carousel/Growatt-Logo-white.png" alt="Growatt - Partner" loading="lazy" />
-        </div>
-        
-        <!-- Second set for seamless loop -->
-        <div class="logo-item" aria-hidden="true">
-          <img src="/images/carousel/aquatech.webp" alt="" loading="lazy" />
-        </div>
-        <div class="logo-item" aria-hidden="true">
-          <img src="/images/carousel/Goodwe-Logo-white.png" alt="" loading="lazy" />
-        </div>
-        <div class="logo-item" aria-hidden="true">
-          <img src="/images/carousel/Sungrow-Logo-white.png" alt="" loading="lazy" />
-        </div>
-        <div class="logo-item" aria-hidden="true">
-          <img src="/images/carousel/Growatt-Logo-white.png" alt="" loading="lazy" />
-        </div>
-        
-        <!-- Third set for extra smoothness -->
-        <div class="logo-item" aria-hidden="true">
-          <img src="/images/carousel/aquatech.webp" alt="" loading="lazy" />
-        </div>
-        <div class="logo-item" aria-hidden="true">
-          <img src="/images/carousel/Goodwe-Logo-white.png" alt="" loading="lazy" />
-        </div>
-        <div class="logo-item" aria-hidden="true">
-          <img src="/images/carousel/Sungrow-Logo-white.png" alt="" loading="lazy" />
-        </div>
-        <div class="logo-item" aria-hidden="true">
-          <img src="/images/carousel/Growatt-Logo-white.png" alt="" loading="lazy" />
-        </div>
+    <div class="logo-carousel-wrapper" role="marquee" aria-live="off">      <div class="logo-carousel-track">
+        <!-- Generate 3 sets of logos for seamless infinite scroll -->
+        {[1, 2, 3].map((setIndex) => 
+          partnerLogos.map((logo, logoIndex) => (
+            <div 
+              class="logo-item" 
+              aria-hidden={setIndex > 1 ? "true" : undefined}
+            >
+              <img 
+                src={logo.src} 
+                alt={setIndex === 1 ? logo.alt : ""} 
+                loading="lazy" 
+              />
+            </div>
+          ))
+        )}
       </div>
     </div>
   </div>
@@ -79,20 +81,19 @@
       transparent 100%
     );
   }
-
   .logo-carousel-track {
     display: flex;
     align-items: center;
-    width: calc(300% + 8rem); /* Accommodate triple set of logos */
+    width: calc(300% + 12rem); /* Accommodate triple set of 5 logos each */
     gap: 4rem;
     /* 
      * Seamless loop technique: 
-     * - We have 3 identical sets of 4 logos each (12 total)
+     * - We have 3 identical sets of 5 logos each (15 total)
      * - Animation moves exactly 1/3 of the width (one complete set)
      * - When animation restarts, it's perfectly aligned with the beginning
      * - This eliminates the flicker/jump effect
      */
-    animation: scroll-infinite 30s linear infinite;
+    animation: scroll-infinite 35s linear infinite;
     will-change: transform;
     transform-style: preserve-3d;
     /* Enable hardware acceleration for smoother animation */
@@ -136,11 +137,10 @@
     }
   }
 
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
+  /* Responsive adjustments */  @media (max-width: 768px) {
     .logo-carousel-track {
       gap: 2rem;
-      animation-duration: 22s;
+      animation-duration: 25s;
     }
     
     .logo-item {
@@ -153,11 +153,10 @@
       max-height: 40px;
     }
   }
-
   @media (max-width: 480px) {
     .logo-carousel-track {
       gap: 1.5rem;
-      animation-duration: 18s;
+      animation-duration: 20s;
     }
     
     .logo-item {

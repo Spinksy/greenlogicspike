@@ -4,6 +4,7 @@ banner:
   content: ""
   image: /images/banner/aquatec-460x1024.png
   battery: /images/home/goodwe_battery_storage.png
+  charger: /images/banner/sigen_charger.png
   warrantyouter: /images/banner/warranty_outer.png
   warrantyinner: /images/banner/five-icon-52x72.png
   button:
