@@ -1,26 +1,6 @@
 {
   "main": [
-    
-    {
-     
-          "name": "Solar Power",
-          "url": "/features"
-        },
-        {
-          "name": "Battery Storage",
-          "url": "/integrations"
-        },
-
-        {
-          "name": "Heat Pumps",
-          "url": "/pricing"
-        },
-
-    
-    {
-      "name": "About Us",
-      "url": "/about"
-    }
+   
   ],
 
   "footer": [
