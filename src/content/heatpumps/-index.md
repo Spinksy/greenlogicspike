@@ -1,6 +1,6 @@
 ---
 banner:
-  title: "Perth Solar Energy, Battery Storage and Heat Pump Specialists"
+  title: "Heat Pumps"
   content: ""
   image: /images/banner/aquatec-460x1024.png
   battery: /images/home/goodwe_battery_storage.png
@@ -11,44 +11,39 @@ banner:
     enable: true
     label: Get an obligation free quote
     link: /contact
-
-##key features
 key_features:
-  title: "Thousands of Solar Systems installed across Perth and Counting..."
+  title: "Thousands of Heat Pumps installed across Perth and Counting..."
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas Werat viverra id et aliquet. vulputate egestas sollicitudin.
   feature_list:
-    - icon: "thermometer" #icon package react-feather-icon
+    - icon: "thermometer"
       title: Heat Pumps
       content: Savings will appear out of thin air with an Aquatech Heat Pump hot water system
-    - icon: "batteryCharging" #icon package react-feather-icon
+    - icon: "battery-charging"
       title: Battery Storage
       content: Maximise your solar savings with battery storage
-    - icon: "sun" #icon package react-feather-icon
+    - icon: "sun"
       title: Solar Power
       content: We can help you slash your power bills with a solar power package
-    - icon: "sun" #icon package react-feather-icon
+    - icon: "sun"
       title: Solar Hot Water
       content: Reliable, efficient solar hot water systems
-
-#service
 service:
   homepage_tab:
     title: Prevent failure from to impacting your reputation
     description: Our platform helps you build secure onboarding authentication experiences that retain and engage your users. We build the infrastructure, you can.
     tab_list:
       - title: Habit building essential choose habit
-        icon: "lock" #icon package react-feather-icon
+        icon: "lock"
         image: "/images/sells-by-country.png"
       - title: Get an overview of Habit Calendars.
-        icon: "clock" #icon package react-feather-icon
+        icon: "clock"
         image: "/images/collaboration.png"
       - title: Start building with Habitify platform
-        icon: "bell" #icon package react-feather-icon
+        icon: "bell"
         image: "/images/sells-by-country.png"
-
   our_service:
     - title: Accept payments any country in this whole universe
-      desctiption: Donec sollicitudin molestie malesda. Donec sollitudin molestie malesuada. Mauris pellentesque nec, egestas non nisi. Cras ultricies ligula sed
+      description: Donec sollicitudin molestie malesda. Donec sollitudin molestie malesuada. Mauris pellentesque nec, egestas non nisi. Cras ultricies ligula sed
       image: "/images/collaboration.png"
       list:
         - Supporting more than 119 country world
@@ -63,8 +58,6 @@ service:
         enable: true
         label: Know About Us
         link: "#"
-
-#testimonial
 testimonial:
   title: Our customers have nice things to say about us
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas Werat viverra id et aliquet. vulputate egestas sollicitudin.
@@ -73,45 +66,5 @@ testimonial:
       avatar: "/images/users/user-5.png"
       organization: meta limited
       rating: four
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-6.png"
-      organization: meta limited
-      rating: four
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-2.png"
-      organization: meta limited
-      rating: three
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-3.png"
-      organization: meta limited
-      rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-4.png"
-      organization: meta limited
-      rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-1.png"
-      organization: meta limited
-      rating: three
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-5.png"
-      organization: meta limited
-      rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-5.png"
-      organization: meta limited
-      rating: five
-      content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
-    - author: David Cameron
-      avatar: "/images/users/user-5.png"
-      organization: meta limited
-      rating: five
       content: Our platform helps build secure onboarding authentica experiences & engage your users. We build .
 ---

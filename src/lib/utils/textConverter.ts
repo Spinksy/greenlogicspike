@@ -18,13 +18,10 @@ export const markdownify = (content: string) => {
 // humanize
 export const humanize = (content: string) => {
   if (!content) return null;
-
+  // Convert kebab-case or snake_case to PascalCase
   return content
-    .replace(/^[\s_]+|[\s_]+$/g, "")
-    .replace(/[_\s]+/g, " ")
-    .replace(/^[a-z]/, function (m) {
-      return m.toUpperCase();
-    });
+    .replace(/[-_\s]+(.)?/g, (_, c) => (c ? c.toUpperCase() : ""))
+    .replace(/^(.)/, (m) => m.toUpperCase());
 };
 
 // plainify

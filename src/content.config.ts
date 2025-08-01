@@ -34,7 +34,6 @@ const homepageCollection = defineCollection({
         )
         .optional(),
     }),
-
     service: z.object({
       homepage_tab: z.object({
         title: z.string(),
@@ -49,7 +48,6 @@ const homepageCollection = defineCollection({
           )
           .optional(),
       }),
-
       our_service: z.array(
         z.object({
           title: z.string(),
@@ -88,6 +86,30 @@ const homepageCollection = defineCollection({
         .optional(),
     }),
   }),
+});
+
+// Heatpumps Collection Schema
+const heatpumpsCollection = defineCollection({
+  loader: glob({ pattern: "**/-*.{md,mdx}", base: "src/content/heatpumps" }),
+  schema: homepageCollection.schema,
+});
+
+// Batterystorage Collection Schema
+const batterystorageCollection = defineCollection({
+  loader: glob({ pattern: "**/-*.{md,mdx}", base: "src/content/batterystorage" }),
+  schema: homepageCollection.schema,
+});
+
+// Solarpower Collection Schema
+const solarpowerCollection = defineCollection({
+  loader: glob({ pattern: "**/-*.{md,mdx}", base: "src/content/solarpower" }),
+  schema: homepageCollection.schema,
+});
+
+// Solarhotwater Collection Schema
+const solarhotwaterCollection = defineCollection({
+  loader: glob({ pattern: "**/-*.{md,mdx}", base: "src/content/solarhotwater" }),
+  schema: homepageCollection.schema,
 });
 
 // About Collection Schema
@@ -418,6 +440,10 @@ const pagesCollection = defineCollection({
 // Export collections
 export const collections = {
   homepage: homepageCollection,
+  heatpumps: heatpumpsCollection,
+  batterystorage: batterystorageCollection,
+  solarpower: solarpowerCollection,
+  solarhotwater: solarhotwaterCollection,
   about: aboutCollection,
   blog: blogCollection,
   features: featuresCollection,

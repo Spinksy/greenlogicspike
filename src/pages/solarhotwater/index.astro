@@ -6,20 +6,19 @@ import KeyFeatures from "@/layouts/components/KeyFeatures.astro";
 import Service from "@/layouts/components/Service.astro";
 import Testimonial from "@/layouts/components/Testimonial.astro";
 import Cta from "@/layouts/partials/Cta.astro";
-import type { CollectionEntry } from "astro:content";
 import { getEntry } from "astro:content";
 
-const homepage = (await getEntry(
-  "homepage",
+// TODO: After restarting the dev server, update the type assertion below to use the correct CollectionEntry type
+const page = (await getEntry(
+  "solarhotwater",
   "-index"
-)) as CollectionEntry<"homepage">;
-const { banner, key_features, service, testimonial } = homepage.data;
+)) as any;
+const { banner, key_features, service, testimonial } = page.data;
 ---
 
 <Base>
   <Banner banner={banner} />
   <LogoCarousel />
-  
   <KeyFeatures key_features={key_features} />
   <!-- <Service service={service} /> -->
   <!-- <Testimonial testimonial={testimonial} /> -->
