@@ -20,12 +20,15 @@ key_features:
     - icon: "thermometer" #icon package react-feather-icon
       title: Heat Pumps
       content: Savings will appear out of thin air with an Aquatech Heat Pump hot water system
-    - icon: "sun" #icon package react-feather-icon
-      title: Solar Power
-      content: We can help you slash your power bills with a solar power package
     - icon: "batteryCharging" #icon package react-feather-icon
       title: Battery Storage
       content: Maximise your solar savings with battery storage
+    - icon: "sun" #icon package react-feather-icon
+      title: Solar Power
+      content: We can help you slash your power bills with a solar power package
+    - icon: "sun" #icon package react-feather-icon
+      title: Solar Hot Water
+      content: Reliable, efficient solar hot water systems
 
 #service
 service:

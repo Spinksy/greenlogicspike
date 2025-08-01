@@ -1,6 +1,25 @@
 {
   "main": [
-   
+    {
+      "name": "Heat Pumps",
+      "url": "/heatpumps"
+    },
+    {
+      "name": "Battery Storage",
+      "url": "/integrations"
+    },
+    {
+      "name": "Solar Power",
+      "url": "/integrations"
+    },
+    {
+      "name": "Solar Hot Water",
+      "url": "/integrations"
+    },
+    {
+      "name": "About",
+      "url": "/about"
+    }
   ],
 
   "footer": [
