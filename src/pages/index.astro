@@ -9,7 +9,7 @@ import { Image } from "astro:assets";
 
 const homepage = (await getEntry(
   "homepage",
-  "-index"
+  "-index",
 )) as CollectionEntry<"homepage">;
 
 const { banner, key_features } = homepage.data;
@@ -19,24 +19,28 @@ const { image, battery, charger } = banner;
 <Base>
   <Banner banner={banner}>
     <Fragment slot="images">
-          <Image
-            class="object-contain"
-            alt="banner"
-            src={image}
-            style="max-height: 396px;"
-            width={180}
-            height={396}
-          />
-          {battery && 
-          <Image
-            class="absolute bottom-0 right-37"
-            src={battery}
-            alt="goodwe battery storage"
-            width={330}
-            height={330}
-          />
-          }
-          {charger && (
+      <div class="relative inline-block">
+        <Image
+          class="object-contain"
+          alt="banner"
+          src={image}
+          style="max-height: 396px;"
+          width={180}
+          height={396}
+        />
+        {
+          battery && (
+            <Image
+              class="absolute bottom-0 right-37"
+              src={battery}
+              alt="goodwe battery storage"
+              width={330}
+              height={330}
+            />
+          )
+        }
+        {
+          charger && (
             <Image
               class="absolute bottom-1 left-34"
               src={charger}
@@ -44,13 +48,12 @@ const { image, battery, charger } = banner;
               width={330}
               height={330}
             />
-          )}
+          )
+        }
+      </div>
     </Fragment>
   </Banner>
   <LogoCarousel />
-  
+
   <KeyFeatures key_features={key_features} />
-  <!-- <Service service={service} /> -->
-  <!-- <Testimonial testimonial={testimonial} /> -->
-  <!-- <Cta /> -->
 </Base>
