@@ -13,6 +13,7 @@ const homepage = (await getEntry(
 )) as CollectionEntry<"homepage">;
 
 const { banner, key_features } = homepage.data;
+const { image, battery, charger } = banner;
 ---
 
 <Base>
@@ -21,25 +22,29 @@ const { banner, key_features } = homepage.data;
           <Image
             class="object-contain"
             alt="banner"
-            src={banner.image}
+            src={image}
             style="max-height: 396px;"
             width={180}
             height={396}
           />
+          {battery && 
           <Image
             class="absolute bottom-0 right-37"
-            src={banner.battery}
+            src={battery}
             alt="goodwe battery storage"
             width={330}
             height={330}
           />
-          <Image
-            class="absolute bottom-1 left-34"
-            src={banner.charger}
-            alt="goodwe battery storage"
-            width={330}
-            height={330}
-          />
+          }
+          {charger && (
+            <Image
+              class="absolute bottom-1 left-34"
+              src={charger}
+              alt="goodwe battery storage"
+              width={330}
+              height={330}
+            />
+          )}
     </Fragment>
   </Banner>
   <LogoCarousel />
