@@ -3,7 +3,7 @@ banner:
   title: "Heat Pumps"
   content: ""
   image: /images/banner/aquatec-460x1024.png
-  image2: /images/heatpumps/internalheatpump.webp
+  image2: /images/heatpumps/internalheatpump.png
   image3: /images/heatpumps/aquatech3.png
   button:
     enable: true
