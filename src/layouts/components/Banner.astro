@@ -2,7 +2,7 @@
 import { markdownify } from "@/lib/utils/textConverter";
 import { Image } from "astro:assets";
 const { banner } = Astro.props;
-const { title, button, image, warrantyouter, warrantyinner, battery, charger, content } = banner;
+const { title, button, image, battery, charger, content } = banner;
 ---
 
 <section class="section banner relative">
@@ -37,44 +37,33 @@ const { title, button, image, warrantyouter, warrantyinner, battery, charger, co
       </div>
       <div class="lg:col-6 text-center lg:text-center mt-8 lg:mt-0">
         <div class="relative inline-block">
-        <Image
-          class="object-contain"
-          alt="banner"
-          src={image}
-          style="max-height: 396px;"
-          width={180}
-          height={396}
-        />
-        <!-- <Image
-          class="absolute -bottom-16 -right-10"
-          src={warrantyouter}
-          alt="warranty badge"
-          width={130}
-          height={130}
-        />
-        <Image
-          class="absolute -bottom-4 right-3"
-          src={warrantyinner}
-          alt="warranty badge"
-          width={26}
-          height={36}
-        /> -->
-        <Image
-          class="absolute bottom-0 right-37"
-          src={battery}
-          alt="goodwe battery storage"
-          width={330}
-          height={330}
-        />
-        <Image
-          class="absolute bottom-1 left-34"
-          src={charger}
-          alt="goodwe battery storage"
-          width={330}
-          height={330}
-        />
+          <slot name="images">
+          <!-- Default images if no slot content is provided -->
+          <Image
+            class="object-contain"
+            alt="banner"
+            src={image}
+            style="max-height: 396px;"
+            width={180}
+            height={396}
+          />
+          <Image
+            class="absolute bottom-0 right-37"
+            src={battery}
+            alt="goodwe battery storage"
+            width={330}
+            height={330}
+          />
+          <Image
+            class="absolute bottom-1 left-34"
+            src={charger}
+            alt="goodwe battery storage"
+            width={330}
+            height={330}
+          />
+
+          </slot>
         </div>
-        
       </div>
     </div>
   </div>
