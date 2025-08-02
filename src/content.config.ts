@@ -9,10 +9,8 @@ const homepageCollection = defineCollection({
       title: z.string(),
       content: z.string().optional(),
       image: z.string(),
-      warrantyouter: z.string().optional(),
-      warrantyinner: z.string().optional(),
-      battery: z.string(),
-      charger: z.string(),
+      battery: z.string().optional(),
+      charger: z.string().optional(),
       button: z
         .object({
           label: z.string(),
@@ -91,7 +89,21 @@ const homepageCollection = defineCollection({
 // Heatpumps Collection Schema
 const heatpumpsCollection = defineCollection({
   loader: glob({ pattern: "**/-*.{md,mdx}", base: "src/content/heatpumps" }),
-  schema: homepageCollection.schema,
+  schema: z.object({
+     banner: z.object({
+        title: z.string(),
+        image: z.string(),
+        image2: z.string(),
+        image3: z.string(),
+        button: z
+        .object({
+          label: z.string(),
+          link: z.string(),
+          enable: z.boolean().default(true),
+        })
+        .optional(),
+    })
+  })
 });
 
 // Batterystorage Collection Schema

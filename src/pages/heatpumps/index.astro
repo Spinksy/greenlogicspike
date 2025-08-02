@@ -1,22 +1,46 @@
 ---
 import Base from "@/layouts/Base.astro";
 import Banner from "@/layouts/components/Banner.astro";
-import LogoCarousel from "@/layouts/components/LogoCarousel.astro";
-import KeyFeatures from "@/layouts/components/KeyFeatures.astro";
-import Service from "@/layouts/components/Service.astro";
-import Testimonial from "@/layouts/components/Testimonial.astro";
-import Cta from "@/layouts/partials/Cta.astro";
 import type { CollectionEntry } from "astro:content";
 import { getEntry } from "astro:content";
+import { Image } from "astro:assets";
 
-const page = (await getEntry(
+const heatpumpsPage = (await getEntry(
   "heatpumps",
-  "-index"
+  "-index",
 )) as CollectionEntry<"heatpumps">;
-const { banner, key_features, service, testimonial } = page.data;
+
+const { banner } = heatpumpsPage.data;
+const { image, image2, image3 } = banner;
 ---
 
 <Base>
-  <Banner banner={banner} />
-  
+  <Banner banner={banner}>
+    <Fragment slot="images">
+      <div class="relative flex justify-center">
+          <Image
+            class="object-contain"
+            alt="banner"
+            src={image}
+            style="margin-right: 50px;"
+            width={180}
+            height={396}
+          />
+          <Image
+            alt="heatpump internal"
+            src={image2}
+            width={224}
+            height={396}
+          />
+          <!-- <Image
+            class="absolute bottom-1 left-34"
+            alt="banner"
+            src={image3}
+            style="max-height: 396px;"
+            width={280}
+            height={396}
+          /> -->
+        </div>
+    </Fragment>
+  </Banner>
 </Base>
