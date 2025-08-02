@@ -4,11 +4,23 @@ banner:
   content: ""
   image: /images/banner/aquatec-460x1024.png
   image2: /images/heatpumps/internalheatpump.png
-  image3: /images/heatpumps/aquatech3.png
+  image3: /images/heatpumps/aquatechlogo.png
   button:
     enable: true
     label: Get an obligation free quote
     link: /contact
+
+# performance
+performance:
+  - title: 5 year warranty
+    description: Replacement warranty backed by Aquatech
+    image: "/images/heatpumps/warranty.png"
+  - title: Wifi Integration
+    description: Monitor and control the unit from your phone
+    image: "/images/heatpumps/wificontrol.png"
+  - title: Compact Design
+    description: Makes installation quick and easy
+    image: "/images/heatpumps/angleright.png"
 
 ##key features
 key_features:

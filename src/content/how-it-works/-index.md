@@ -7,13 +7,13 @@ image: ""
 
 # performance
 performance:
-  - title: market profetionals
-    description: Encourage frequent & timely recognition integrating with communication tools
+  - title: 5 year warranty
+    description: 5 year replacement warranty
     image: "/images/how-it-work/results.png"
-  - title: measurable results
-    description: Encourage frequent & timely recognition integrating with communication tools
+  - title: Wifi Integration
+    description: Wifi Integrated
     image: "/images/how-it-work/market-professionals.png"
-  - title: international award
+  - title: Compact Design
     description: Encourage frequent & timely recognition integrating with communication tools
     image: "/images/how-it-work/awards.png"
 # works

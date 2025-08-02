@@ -102,7 +102,15 @@ const heatpumpsCollection = defineCollection({
           enable: z.boolean().default(true),
         })
         .optional(),
-    })
+    }),
+    // Performance Section
+    performance: z.array(
+      z.object({
+        title: z.string(),
+        description: z.string(),
+        image: z.string(),
+      }),
+    )
   })
 });
 
